@@ -2,12 +2,14 @@
 
 :root {
   /* 色管理用の変数 */
-  --black-color: #333;
-  --white-color: #fff;
-  --gray-color: #aaa;
-  --gray-color02: #fafafa;
-  --primary-color: #1863af;
-  --accent-color: #fc7f24;
+  --black-color: #333333;
+  --white-color: #ffffff;
+  --gray-color: #fafafa;
+  --gray-color02: #e9e9e9;
+  --gray-color03: #9da5a0;
+  --primary-color: #d9aacd;
+  --secondary-color: #faaca8;
+  --main-gradation: linear-gradient(140deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 :root {
@@ -36,7 +38,7 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.8;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 /* クリックした際の青い枠線を削除 */
@@ -88,8 +90,101 @@ span {
 }
 
 .l_contents {
-  padding: 120px 0;
+  padding: 80px 0;
 }
+
+.l_header {
+  height: 120px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-modal);
+  background: var(--gray-color);
+}
+
+@media screen and (min-width: 768px) {
+  .l_header {
+    padding: 0 56px;
+  }
+}
+
+.l_header-logo {
+  height: 100%;
+  font-size: 18px;
+  font-family: 'Sawarabi mincho', serif;
+  color: var(--black-color);
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-logo {
+    font-size: 24px;
+  }
+}
+
+.l_header-logo_link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.l_header-nav {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-color);
+  z-index: var(--z-index-menu);
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav {
+    position: static;
+    background: transparent;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    pointer-events: inherit;
+  }
+}
+
+.l_header-nav_list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav_list {
+    display: flex;
+    gap: 0 48px;
+    position: static;
+    transform: none;
+  }
+}
+
+.l_header-nav_item {
+  font-family: 'Sawarabi mincho', serif;
+  text-align: center;
+  font-size: 24px;
+}
+
+.l_header-nav_item:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .l_header-nav_item:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
 
 
 /* ---------- module ---------- */
@@ -97,4 +192,114 @@ span {
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+}
+
+.m_section-title::before {
+  content: "";
+  font-size: 16px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.m_section-title_about::before {
+  content:"私について";
+}
+
+.m_section-title_works::before {
+  content: "実績";
+}
+
+.m_section-title_cta::before {
+  content: "連絡先";
+}
+
+.m_section-title::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background: var(--main-gradation);
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.m_hamburger {
+  width: 32px;
+  height: 28px;
+  position: relative;
+  z-index: var(--z-index-menu);
+}
+
+@media screen and (min-width: 1080px) {
+  .m_hamburger {
+    display: none;
+  }
+}
+
+.m_hamburger-bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background: var(--gray-color03);
+  left: 50%;
+  transition: 0.3s;
+}
+
+.m_hamburger-bar:first-child {
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.m_hamburger-bar:nth-child(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.m_hamburger-bar:last-child {
+  top: 100%;
+  transform: translate(-50%, -100%);
+}
+
+
+* {
+outline: 1px solid orange;
+}
+
+
+/* ---------- Top ---------- */
+
+.top_about_name {
+  font-family: 'Sawarabi Mincho', serif;
+  margin-top: 120px;
+}
+
+.top_about_name__jp {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .top_about_name__jp {
+    font-size: 32px;
+  }
+}
+
+.top_about_name__en {
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+@media screen and (max-width: 320px) {
+  .top_about_name__en {
+    font-size: 16px;
+  }
+}
+
+.top_about_desc {
+  margin-top: 40px;
 }
