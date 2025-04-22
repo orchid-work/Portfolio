@@ -100,9 +100,9 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: absolute;
+  position: absolute;
   top: 0;
-  left: 0; */
+  left: 0;
   z-index: var(--z-index-modal);
   background: var(--gray-color);
 }
@@ -133,16 +133,23 @@ span {
 }
 
 .l_header-nav {
-  /* position: fixed; */
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 20%;
   right: 0;
   bottom: 0;
-  background: var(--white-color);
+  background: var(--main-gradation);
+  opacity: 0.9;
   z-index: var(--z-index-menu);
 }
 
 @media screen and (min-width: 768px) {
+  .l_header-nav {
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
   .l_header-nav {
     position: static;
     background: transparent;
@@ -155,15 +162,15 @@ span {
 
 .l_header-nav_list {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 33%;
+  left: 33%;
   transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .l_header-nav_list {
     display: flex;
-    gap: 0 48px;
+    gap: 0 64px;
     position: static;
     transform: none;
   }
@@ -171,7 +178,7 @@ span {
 
 .l_header-nav_item {
   font-family: 'Sawarabi mincho', serif;
-  text-align: center;
+  text-align: left;
   font-size: 24px;
 }
 
@@ -179,11 +186,50 @@ span {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1080px) {
   .l_header-nav_item:not(:first-child) {
     margin-top: 0;
   }
 }
+
+@media screen and (min-width: 1080px) {
+  .l_header-nav_item:hover .l_header-nav_list__sub {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s, visibility .3s;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .l_header-nav_item__about {
+    position: relative;
+  }  
+}
+
+.l_header-nav_list__sub {
+  font-size: 20px;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+@media screen and (min-width: 1080px) {
+  .l_header-nav_list__sub {
+    position: absolute;
+    top: 24px;
+    transform: translateX(-10%);
+    margin-left: 0;
+    background: var(--gray-color);
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+    opacity: 0;
+    padding: 16px;
+  }
+}
+
+.l_header-nav_item__sub {
+  margin-top: 16px;
+}
+
 
 .l_footer {
   background: var(--main-gradation);
@@ -331,7 +377,7 @@ span {
   border: 1px solid var(--black-color);
   background: var(--white-color);
   display: block;
-  margin: 40px auto 0;
+  margin: 24px auto 0;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -357,19 +403,14 @@ span {
   height: 48px;
 }
 
-
-* {
-outline: 1px solid orange;
-}
-
-
 /* ---------- Top ---------- */
 .top_kv-wrapper {
   background: linear-gradient(rgba(157, 165, 160, 0.5), rgba(157, 165, 160, 0.5)),
   url(../img/img_kv.jpg) center center / cover;
   position: relative;
-  height: 35vh;
   width: 100%;
+  height: 40vh;
+  margin-top: 120px;
 }
 
 .top_kv-box {
@@ -440,11 +481,12 @@ outline: 1px solid orange;
   overflow: hidden;
 }
 
-/* .top_works_contents {
+.top_works_contents {
   margin: 110px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 48px;
 }
 
@@ -452,32 +494,25 @@ outline: 1px solid orange;
   .top_works_contents {
     flex-direction: row;
   }
-} */
-
-.top_works_contents {
-  position: relative;
-  max-width: calc(var(--content-width-lg) + 32px);
-}
-
-@media screen and (min-width: 1088px) {
-  .top_works_contents {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    height: auto;
-  }
 }
 
 .top_works_content-wrapper {
-  width: 343px;
-  padding: 16px 0;
+  width: 100%;
+  max-width: 343px;
+  padding: 16px;
   flex-shrink: 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  background: var(--white-color);
 }
 
-.top_works_img-wrapper {
+.top_works_img-wrapper,
+.top_works_img-wrapper__blank {
   width: 100%;
   height: 240px;
+}
+
+.top_works_img-wrapper__blank {
+  background: var(--gray-color02);
 }
 
 .top_works_img {
@@ -496,76 +531,46 @@ outline: 1px solid orange;
 }
 
 
-/* swiper */
-.swiper {
-  width: 100%;
-  height: 438px;
+/* ---------- js ---------- */
+.l_header.js_header_fixed {
+  position: fixed;
+  background: var(--gray-color);
+  transition: 0.3s ease;
+  top: 0;
+}
+
+.js_navigation {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 @media screen and (min-width: 1080px) {
-  .swiper {
-    width: 900px;
+  .js_navigation {
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 
-.top_success_nav {
-  width: 53px;
-  height: 53px;
-  background: #fff;
-  border-radius: 100vh;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
-  position: absolute;
-  bottom: -109px;
+.js_navigation.is-active {
+  opacity: 1;
+  pointer-events: inherit;
 }
 
-.swiper-button-prev {
-  right: calc(50% + 96px);
+.js_hamburger.is-active {
+  background: transparent;
 }
 
-.swiper-button-next {
-  left: calc(50% + 96px);
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-top: 2px solid var(--accent-color);
-  border-right: 2px solid var(--accent-color);
+.js_hamburger.is-active .m_hamburger-bar:first-child {
   top: 50%;
-  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
 }
 
-.swiper-button-prev:after {
-  transform: translate(-50%, -50%) rotate(-135deg);
+.js_hamburger.is-active .m_hamburger-bar:nth-child(2) {
+  opacity: 0;
 }
 
-.swiper-button-next:after {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.top_success_dots {
-  position: absolute;
-  left: 50% !important;
-  bottom: -90px !important;
-  transform: translateX(-50%);
-  width: 96px !important;
-  height: 16px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.top_success_dots .swiper-pagination-bullet {
-  background: var(--gray-color);
-  width: 16px;
-  height: 16px;
-  border-radius: 100vh;
-  color: transparent;
-  border: 2px solid var(--white-color);
-}
-
-.top_success_dots .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: var(--accent-color);
+.js_hamburger.is-active .m_hamburger-bar:last-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-45deg);
 }
