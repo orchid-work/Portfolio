@@ -54,28 +54,30 @@
 
 
 </head>
-<body>
-    <header class="l_header">
+<body class="js_body">
+    <header class="l_header js_header_fixed">
         <h1 class="l_header-logo">
             <a href="index.html" class="l_header-logo_link">Ran Matsumura</a>
         </h1>
 
-        <!-- <nav class="l_header-nav js_navigation">
+        <nav class="l_header-nav js_navigation">
             <ul class="l_header-nav_list">
                 <li class="l_header-nav_item">
                     <a href="index.html" class="l_header-nav_link">Top</a>
                 </li>
                 <li class="l_header-nav_item">
-                    <a href="about.html" class="l_header-nav_link">About</a>
-                </li>
-                <li class="l_header-nav_item l_header-nav_item__sub">
-                    <a href="about.html#skill" class="l_header-nav_link">Skill</a>
-                </li>
-                <li class="l_header-nav_item l_header-nav_item__sub">
-                    <a href="about.html#tool" class="l_header-nav_link">Tool</a>
-                </li>
-                <li class="l_header-nav_item l_header-nav_item__sub">
-                    <a href="about.html#history" class="l_header-nav_link">History</a>
+                    <a href="about.html" class="l_header-nav_link l_header-nav_link__about">About</a>
+                    <ul class="l_header-nav_list__sub">
+                        <li class="l_header-nav_item__sub">
+                            <a href="about.html#skill" class="l_header-nav_link__sub">Skill</a>
+                        </li>
+                        <li class="l_header-nav_item__sub">
+                            <a href="about.html#tool" class="l_header-nav_link__sub">Tool</a>
+                        </li>
+                        <li class="l_header-nav_item__sub">
+                            <a href="about.html#history" class="l_header-nav_link__sub">History</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="l_header-nav_item">
                     <a href="works.html" class="l_header-nav_link">Works</a>
@@ -84,9 +86,9 @@
                     <a href="Contact.html" class="l_header-nav_link">Contact</a>
                 </li>
             </ul>
-        </nav> -->
+        </nav>
 
-        <button class="m_hamburger">
+        <button class="m_hamburger js_hamburger">
             <span class="m_hamburger-bar"></span>
             <span class="m_hamburger-bar"></span>
             <span class="m_hamburger-bar"></span>
@@ -126,7 +128,7 @@
         <!-- /.top_about -->
         <section class="top_works">
             <div class="l_contents">
-                <div class="l_container">
+                <div class="l_container-lg">
                     <h2 class="m_section-title m_section-title_works" id="works">
                         Works
                     </h2>
@@ -141,7 +143,7 @@
                                 height="768">
                             </div>
                             <h3 class="top_works_content-title">
-                                喫茶 晴凪 様　公式サイト（架空）
+                                喫茶 晴凪 様　公式サイト
                             </h3>
                             <span class="top_works_content-tag">
                                 チーム制作, 卒業課題
@@ -179,77 +181,6 @@
                             </div>
                         </article>
                         <!-- /.top_works_content-wrapper -->
-
-                        <!-- Slider main container -->
-<div class="swiper js_works-swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <article class="top_works_content-wrapper">
-            <div class="top_works_img-wrapper">
-                <img 
-                src="img/img_works01.jpg" 
-                alt="喫茶晴凪公式サイトの画像" 
-                class="top_works_img" 
-                width="1366" 
-                height="768">
-            </div>
-            <h3 class="top_works_content-title">
-                喫茶 晴凪 様　公式サイト（架空）
-            </h3>
-            <span class="top_works_content-tag">
-                チーム制作, 卒業課題
-            </span>
-            <div class="m_sm-btn-wrapper">
-                <a href="works-single.html" class="m_btn m_sm-btn">制作過程を見る</a>
-            </div>
-        </article>
-      </div>
-      <div class="swiper-slide">
-        <article class="top_works_content-wrapper">
-            <div class="top_works_img-wrapper">
-                <img src="" alt="" class="top_works_img">
-            </div>
-            <h3 class="top_works_content-title">
-                ポートフォリオサイト
-            </h3>
-            <span class="top_works_content-tag">
-                自主制作
-            </span>
-            <div class="m_sm-btn-wrapper">
-                <a href="works-single.html" class="m_sm-btn">制作過程を見る</a>
-            </div>
-        </article>
-      </div>
-      <div class="swiper-slide">
-        <article class="top_works_content-wrapper">
-            <div class="top_works_img-wrapper">
-                <img src="" alt="" class="top_works_img">
-            </div>
-            <h3 class="top_works_content-title">
-                Coming Soon...
-            </h3>
-            <span class="top_works_content-tag">
-                自主制作
-            </span>
-            <div class="m_sm-btn-wrapper">
-                <a href="works-single.html" class="m_sm-btn">制作過程を見る</a>
-            </div>
-        </article>
-      </div>
-      ...
-    </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
                     </div>
                     <!-- /.top_works_contents -->
                     <div class="m_btn-wrapper m_btn__more">
