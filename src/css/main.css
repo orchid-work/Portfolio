@@ -407,7 +407,6 @@ span {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 24px;
   position: relative;
-  margin-top: 80px;
   margin-left: 22px;
   letter-spacing: 0.1em;
 }
@@ -612,6 +611,150 @@ span {
 .about_contents {
   width: 100%;
   max-width: 900px;
+  margin-top: 80px;
+}
+
+.about_strength-wrapper {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1080px) {
+  .about_strength-wrapper {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .about_strength-box {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+.about_strength-box:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 1080px) {
+  .about_strength-box:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.about_strength {
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.about_strength_first {
+  background: var(--primary-color);
+}
+
+.about_strength_second {
+  background: var(--secondary-color);
+}
+
+.about_strength_desc {
+  margin-top: 16px;
+}
+
+.about_skill {
+  background: var(--gray-color);
+}
+
+@media screen and (min-width: 1080px) {
+  .about_skill_contents {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+.about_skill_content {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1080px) {
+  .about_skill_content {
+    width: 100%;
+    max-width: calc((100% - 40px) / 2);
+  }
+}
+
+.about_skill_table {
+  margin-top: 40px;
+}
+
+.about_skill_title {
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 24px;
+}
+
+.about_skill_table-row {
+  border-bottom: 1px solid var(--gray-color03);
+}
+
+.about_skill_table-row:first-child {
+  background: var(--gray-color02);
+  border-top: 1px solid var(--gray-color03)
+}
+
+.about_skill_table-row:nth-child(2n) {
+  background: var(--white-color);
+}
+
+.about_skill_table-head,
+.about_skill_table-data {
+  padding: 16px;
+}
+
+
+.about_tool_heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about_tool_contents {
+  margin-top: 40px;
+}
+
+.about_tool_items {
+  margin-top: 32px;
+}
+
+.about_tool_item-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about_tool_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-image: 
+  radial-gradient(var(--white-color) 55%, transparent 55%),
+  conic-gradient(
+    var(--primary-color) 0%,
+    var(--secondary-color) 30%,
+    var(--gray-color02) 30% 100%
+  );
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.about_tool_item-desc {
+  font-size: 12px;
+  margin-left: 16px;
 }
 
 /* ---------- js ---------- */
