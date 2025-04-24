@@ -899,7 +899,59 @@ span {
 .about_history_desc {  
   font-size: 12px;
 }
-  
+
+
+/* ---------- Works ---------- */
+.works_title {
+  margin-top: 120px;
+}
+
+.works_section {
+  background: var(--white-color);
+}
+
+/* ---------- Works-single ---------- */
+.works-single_kv-wrapper {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .works-single_kv__sp {
+    display: none;
+  }
+}
+
+.works-single_kv__pc {
+  display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .works-single_kv__pc {
+    display: block;
+  }
+}
+
+.works-single_title {
+  font-size: 24px;
+  font-family: 'Sawarabi Mincho', serif;
+}
+
+@media screen and (min-width: 1080px) {
+  .works-single_title {
+    font-size: 32px;
+  }
+}
+
+.works-single_tag {
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 1080px) {
+  .works-single_tag {
+    font-size: 24px;
+  }
+}
 
 /* ---------- js ---------- */
 .l_header.js_header_fixed {
