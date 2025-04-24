@@ -828,48 +828,65 @@ span {
   margin-left: 16px;
 }
 
-/* time-schedule */
-.time-schedule {
-  min-width: 400px;
+.about_history_contents {
+  margin-top: 48px;
+}
+
+.about_history_list {
   max-width: 400px;
   list-style: none;
-  margin: 0 auto 0 6em;
+  margin: 0 auto 6em;
   padding-left: 20px;
   border-left: 2px solid var(--primary-color);
   box-sizing: border-box;
-}
-
-.time-schedule li {
-  width: 100%;
-  margin: 0 0;
-  padding: 5px 0;
   position: relative;
 }
 
-.time-schedule span.time {
+.about_history_list::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  transform: translateX(-29px) rotate(45deg);
+  position: absolute;
+  bottom: 0;
+}
+
+.about_history_item {
+  width: 100%;
+  margin: 0 0;
+  padding: 16px 0;
+  position: relative;
+}
+
+.about_history_item:first-child {
+  padding-top: 0;
+}
+
+.about_history_year {
   width: 5em;
   display: inline-block;
   margin-left: -8em;
   padding: 0 0 5px;
-  margin-top: 15px;
   vertical-align: top;
   position: relative;
   text-align: right;
   box-sizing: border-box;
 }
 
-.time-schedule span.time::after {
+.about_history_year::after {
   content: "";
   position: absolute;
-  right: -33px;
-  top: 0;
+  right: -32px;
+  top: 10px;
   background: var(--primary-color);
   width: 10px;
   height: 10px;
   border-radius: 10px;
 }
 
-.time-schedule .sch_box {
+.about_history_desc-wrapper {
   display: inline-block;
   width: 100%;
   margin-left: 30px;
@@ -879,7 +896,7 @@ span {
   box-sizing: border-box;
 }
 
-.time-schedule .sch_tx {  
+.about_history_desc {  
   font-size: 12px;
 }
   
