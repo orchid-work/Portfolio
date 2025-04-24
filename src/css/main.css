@@ -661,7 +661,8 @@ span {
   margin-top: 16px;
 }
 
-.about_skill {
+.about_skill,
+.about_history {
   background: var(--gray-color);
 }
 
@@ -681,8 +682,7 @@ span {
 
 @media screen and (min-width: 1080px) {
   .about_skill_content {
-    width: 100%;
-    max-width: calc((100% - 40px) / 2);
+    width: calc((100% - 40px) / 2);
   }
 }
 
@@ -714,17 +714,48 @@ span {
   padding: 16px;
 }
 
-
 .about_tool_heading {
   font-size: 20px;
   font-weight: bold;
+  display: inline-block;
 }
 
 .about_tool_contents {
   margin-top: 40px;
 }
 
+@media screen and (min-width: 1080px) {
+  .about_tool_contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+  }
+}
+
+.about_tool_content {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1080px) {
+  .about_tool_content {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+.about_tool_content:not(:first-child) {
+  margin-top: 48px;
+}
+
+@media screen and (min-width: 1080px) {
+  .about_tool_content:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
 .about_tool_items {
+  width: 100%;
   margin-top: 32px;
 }
 
@@ -733,13 +764,16 @@ span {
   align-items: center;
 }
 
+.about_tool_item-wrapper:not(:first-child) {
+  margin-top: 32px;
+}
+
 .about_tool_circle {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 88px;
   height: 88px;
-  margin: 0 auto;
   border-radius: 50%;
   background-image: 
   radial-gradient(var(--white-color) 55%, transparent 55%),
@@ -752,10 +786,103 @@ span {
   flex-shrink: 0;
 }
 
+@media screen and (min-width: 1080px) {
+  .about_tool_circle {
+    width: 102px;
+    height: 102px;
+  }
+}
+
+.about_tool_circle__git {
+  background-image: 
+  radial-gradient(var(--white-color) 55%, transparent 55%),
+  conic-gradient(
+    var(--primary-color) 0%,
+    var(--secondary-color) 10%,
+    var(--gray-color02) 10% 100%
+  );
+}
+
+.about_tool_circle__word {
+  background-image: 
+  radial-gradient(var(--white-color) 55%, transparent 55%),
+  conic-gradient(
+    var(--primary-color) 0%,
+    var(--secondary-color) 40%,
+    var(--gray-color02) 40% 100%
+  );
+}
+
+.about_tool_circle__figma {
+  background-image: 
+  radial-gradient(var(--white-color) 55%, transparent 55%),
+  conic-gradient(
+    var(--primary-color) 0%,
+    var(--secondary-color) 20%,
+    var(--gray-color02) 20% 100%
+  );
+}
+
 .about_tool_item-desc {
   font-size: 12px;
   margin-left: 16px;
 }
+
+/* time-schedule */
+.time-schedule {
+  min-width: 400px;
+  max-width: 400px;
+  list-style: none;
+  margin: 0 auto 0 6em;
+  padding-left: 20px;
+  border-left: 2px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+.time-schedule li {
+  width: 100%;
+  margin: 0 0;
+  padding: 5px 0;
+  position: relative;
+}
+
+.time-schedule span.time {
+  width: 5em;
+  display: inline-block;
+  margin-left: -8em;
+  padding: 0 0 5px;
+  margin-top: 15px;
+  vertical-align: top;
+  position: relative;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.time-schedule span.time::after {
+  content: "";
+  position: absolute;
+  right: -33px;
+  top: 0;
+  background: var(--primary-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+.time-schedule .sch_box {
+  display: inline-block;
+  width: 100%;
+  margin-left: 30px;
+  padding: 8px 24px;
+  vertical-align: middle;
+  background: var(--white-color);
+  box-sizing: border-box;
+}
+
+.time-schedule .sch_tx {  
+  font-size: 12px;
+}
+  
 
 /* ---------- js ---------- */
 .l_header.js_header_fixed {
