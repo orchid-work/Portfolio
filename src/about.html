@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ran Matsumura</title>
+    <meta name="description" content="松村蘭のポートフォリオサイト" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/web-clip-icon -->
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="webclip.png" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="松村蘭のポートフォリオサイト" />
+    <meta property="og:url" content="TODO:" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="松村蘭のポートフォリオサイト" />
+    <meta
+      property="og:description"
+      content="未経験からエンジニアを目指す松村蘭のポートフォリオサイトです。"
+    />
+    <meta property="og:image" content="TODO:" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="未経験からエンジニアを目指す松村蘭のポートフォリオサイトです。"
+    />
+    <meta name="twitter:image:src" content="TODO:" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- js -->
+    <!-- gsap,swiperはここ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="js_body">
+    <header class="l_header js_header_fixed">
+      <h1 class="l_header-logo">
+        <a href="index.html" class="l_header-logo_link">Ran Matsumura</a>
+      </h1>
+
+      <nav class="l_header-nav js_navigation">
+        <ul class="l_header-nav_list">
+          <li class="l_header-nav_item">
+            <a href="index.html" class="l_header-nav_link">Top</a>
+          </li>
+          <li class="l_header-nav_item l_header-nav_item__about">
+            <a href="about.html" class="l_header-nav_link">About</a>
+            <ul class="l_header-nav_list__sub">
+              <li class="l_header-nav_item__sub">
+                <a href="about.html#skill" class="l_header-nav_link__sub"
+                  >Skill</a
+                >
+              </li>
+              <li class="l_header-nav_item__sub">
+                <a href="about.html#tool" class="l_header-nav_link__sub"
+                  >Tool</a
+                >
+              </li>
+              <li class="l_header-nav_item__sub">
+                <a href="about.html#history" class="l_header-nav_link__sub"
+                  >History</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="l_header-nav_item">
+            <a href="works.html" class="l_header-nav_link">Works</a>
+          </li>
+          <li class="l_header-nav_item">
+            <a href="Contact.html" class="l_header-nav_link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="m_hamburger js_hamburger">
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+      </button>
+    </header>
+    <main class="l_main">
+      <section class="about_desc">
+        <div class="l_contents">
+          <div class="l_container">
+            <h1
+              class="m_section-title m_section-title_about about_title"
+              id="about"
+            >
+              About
+            </h1>
+            <div class="about_content-wapper">
+              <div class="about_img-wrapper">
+                <img src="" alt="" class="about_img" />
+              </div>
+              <div class="about_desc-box">
+                <h2 class="about_name">
+                  <span class="top_about_name__jp">松村 蘭</span>
+                  <span class="top_about_name__en">Ran Matsumura</span>
+                </h2>
+                <!-- /.about_name -->
+                <p class="about_texts">
+                  タイ生まれ、愛媛育ち、学生時代を京都で過ごし、現在は愛知在住の1児の母。<br />
+                  前職でのWebシステムの導入による大幅な業務改善をきっかけにIT業界に興味を持ち、Web制作を学ぶため、プログラミングスクールZeroPlusに入学。仕事と育児と両立しながら学習を進め、2025年5月からIT業界へ。
+                </p>
+              </div>
+              <!-- /.about_desc-box -->
+            </div>
+            <!-- /.about_content-wapper -->
+            <div class="about_contents">
+              <h3 class="m_section-heading">Strength</h3>
+              <div class="about_strength-wrapper">
+                <div class="about_strength-box">
+                  <p class="about_strength about_strength_first">コミュニケーション力</p>
+                  <p class="about_strength_desc">
+                    誠実かつ丁寧な対応で、チームや顧客との良好な関係を築きながら成果を出すことに貢献します。
+                  </p>
+                </div>
+                <div class="about_strength-box">
+                  <p class="about_strength about_strength_second">向上心</p>
+                  <p class="about_strength_desc">
+                    どんな仕事にも真面目で素直に取り組みます。優れた取り組みを積極的に学び、すぐに取り入れて実行することが強みです。
+                  </p>
+                </div>
+              </div>
+              <!-- /.about_strength-wrapper -->
+            </div>
+            <!-- /.about_contents -->
+          </div>
+          <!-- /.l_container -->
+        </div>
+        <!-- /.l_contents -->
+      </section>
+      <!-- /.about_desc -->
+
+      <section class="about_skill" id="skill">
+        <div class="l_contents">
+          <div class="l_container">
+            <h3 class="m_section-heading">Skill</h3>
+            <div class="about_skill_contents">
+              <div class="about_skill_content">
+                <table class="about_skill_table">
+                  <caption class="about_skill_title">資格</caption>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">資格名</th>
+                      <td class="about_skill_table-data">取得年月</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">ITパスポート試験</th>
+                      <td class="about_skill_table-data">2025年3月</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">実用英語技能検定2級</th>
+                      <td class="about_skill_table-data">2006年11月</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">普通自動車第一種運転免許</th>
+                      <td class="about_skill_table-data">2012年12月</td>
+                    </tr>
+                </table>
+              </div>
+              <!-- /.about_skill_content -->
+              <div class="about_skill_content">
+                <table class="about_skill_table">
+                  <caption class="about_skill_title">言語</caption>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">言語名</th>
+                      <td class="about_skill_table-data">ITSS</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">HTML / CSS</th>
+                      <td class="about_skill_table-data">レベル1</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">JavaScript</th>
+                      <td class="about_skill_table-data">レベル1</td>
+                    </tr>
+                    <tr class="about_skill_table-row">
+                      <th scope="row" class="about_skill_table-head">WordPress</th>
+                      <td class="about_skill_table-data">レベル1</td>
+                    </tr>
+                </table>
+              </div>
+              <!-- /.about_skill_content -->
+            </div>
+            <!-- /.about_skill_contents -->
+          </div>
+          <!-- /.l_container -->
+        </div>
+        <!-- /.l_contents -->
+      </section>
+      <!-- /.about_skill -->
+
+      <section class="about_tool" id="tool">
+        <div class="l_contents">
+          <div class="l_container">
+            <h3 class="m_section-heading">Tool</h3>
+            <div class="about_tool_contents">
+              <div class="about_tool_content">
+                <h4 class="about_tool_heading">プログラミング</h4>
+                <div class="about_tool_items">
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle">VSCode</div>
+                    <p class="about_tool_item-desc">
+                      使用歴約半年。<br>
+                      プラグインやスニペットを活用しながらコーディングを行っている。<br>
+                      Gitとの連携も可能。
+                    </p>
+                  </div>
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle about_tool_circle__git">Git</div>
+                    <p class="about_tool_item-desc">
+                      使用歴約1ヶ月。<br>
+                      GitHubと合わせて使い方を練習中。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.about_tool_content -->
+              <div class="about_tool_content">
+                <h4 class="about_tool_heading">Microsoft Office</h4>
+                <div class="about_tool_items">
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle about_tool_circle__word">Word</div>
+                    <p class="about_tool_item-desc">
+                      使用歴20年以上。中級レベル。<br>
+                      ビジネス文書・マニュアル・チラシ作成、差し込み印刷などを素早く行うことができる。
+                    </p>
+                  </div>
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle">Excel</div>
+                    <p class="about_tool_item-desc">
+                      使用歴20年以上。初級レベル。<br>
+                      進捗管理表の作成、社内ツールの運用、csvファイルから体裁を整えることができる。
+                    </p>
+                  </div>
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle">Power<br>Point</div>
+                    <p class="about_tool_item-desc">
+                      使用歴10年以上。初級レベル。<br>
+                      一般的なプレゼン資料、掲示物作成ができる。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.about_tool_content -->
+              <div class="about_tool_content">
+                <h4 class="about_tool_heading">デザイン</h4>
+                <div class="about_tool_items">
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle about_tool_circle__figma">Figma</div>
+                    <p class="about_tool_item-desc">
+                      使用歴約１ヶ月。<br>
+                      当サイトのワイヤーフレーム、デザインカンプを作成。コンポーネント化、インタラクションの設定も可能。
+                    </p>
+                  </div>
+                  <div class="about_tool_item-wrapper">
+                    <div class="about_tool_circle about_tool_circle__word">Canva</div>
+                    <p class="about_tool_item-desc">
+                      使用歴約7年。<br>
+                      テンプレートをもとにしたチラシ、Instagramフィード投稿、ロゴ作成が可能。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.about_tool_content -->
+              <div class="about_tool_content">
+                <h4 class="about_tool_heading">その他</h4>
+                <div class="about_tool_items">
+                  <div class="about_tool_item-wrapper">
+                    <p class="about_tool_item-desc">
+                      Slack, Teams, ChatLuck<br>
+                      Zoom, Google Meet<br>
+                      Lotus Notes, desknet’s NEO　に対応可能。<br>
+                      その他経験のないツールでも抵抗なく扱えます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.about_tool_content -->
+            </div>
+            <!-- /.about_tool_contents -->
+          </div>
+          <!-- /.l_container -->
+        </div>
+        <!-- /.l_contents -->
+      </section>
+      <!-- /.about_tool -->
+
+      <section class="about_history" id="history">
+        <div class="l_contents">
+          <div class="l_container">
+            <h3 class="m_section-heading">History</h3>
+            <div class="about_history_contents">
+              <ul class="about_history_list">
+                <li class="about_history_item">
+                  <span class="about_history_year">2013</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      学習塾（個別指導）運営職として新卒入社し、滋賀県で勤務。10ヶ月で教室長に昇格後3ヶ月連続で月次目標を達成。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2015</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      他教室での成功事例を導入し、紹介入室数を増加させ、増客・増収を実現、年間表彰を受ける。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2017</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      異動初年度の夏の集客で過去最高入室数を達成。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2019</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      結婚を機に愛知県に異動。講師の指導・研修、マニュアルの整備・周知を通じ、部門スタンダードに即した運営に改善。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2022
+                  </span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      1年半の産休・育休を経て、異例の現場職復帰後、新システム導入にあたり、愛知エリア内での研修を担当。作成したマニュアルが部門に採用され、現場でのヘルプデスク業務にあたる。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2024</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      仕事・育児をしながらプログラミングスクールに入学、学習をスタート。
+                    </p>
+                  </div>
+                </li>
+                <li class="about_history_item">
+                  <span class="about_history_year">2025</span>
+                  <div class="about_history_desc-wrapper">
+                    <p class="about_history_desc">
+                      学習と並行して転職活動を行い、IT業界への転職を決める。<br>
+                      資格取得に向けた学習も行い、約1ヶ月でITパスポート試験に合格。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- /.about_history_contents -->
+            <div class="m_btn-wrapper m_btn__more">
+              <a href="works.html" class="m_btn">実績も見る</a>
+          </div>
+          <!-- /.m_btn-wrapper -->
+          </div>
+          <!-- /.l_container -->
+        </div>
+        <!-- /.l_contents -->
+      </section>
+      <!-- /.about_history -->
+
+    </main>
+    <section class="m_cta">
+      <div class="l_contents">
+        <div class="l_container">
+          <h2 class="m_section-title m_section-title_cta">Contact</h2>
+          <p class="m_cta_desc">
+            以下の媒体でも<br class="u_lg-dn" />
+            日々の取り組みを発信しています。
+          </p>
+          <div class="m_cta_sns-wrapper">
+            <div class="m_cta_sns-icon-wrapper">
+              <a href="https://twitter.com/ebi_work/" class="m_cta_sns-link">
+                <img
+                  src="img/img_twitter.png"
+                  alt="twitterのアイコン"
+                  class="m_cta_sns-icon"
+                  width="2400"
+                  height="2453"
+                />
+              </a>
+            </div>
+            <div class="m_cta_sns-icon-wrapper">
+              <a href="https://github.com/orchid-work" class="m_cta_sns-link">
+                <img
+                  src="img/icon_github.svg"
+                  alt="GitHubのアイコン"
+                  class="m_cta_sns-icon"
+                  width="98"
+                  height="96"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /.l_container -->
+      </div>
+      <!-- /.l_contents -->
+    </section>
+    <!-- /.m_cta -->
+    <footer class="l_footer">
+      <p class="l_footer-copyright">
+        <small class="l_footer-copyright_txt">&copy; 2025 Ran Matsumura</small>
+      </p>
+    </footer>
+  </body>
+</html>
