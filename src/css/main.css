@@ -953,6 +953,36 @@ span {
   }
 }
 
+.works-single_contents {
+  margin-top: 32px;
+}
+
+.works-single_content-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 16px;
+}
+
+.works-single_content-title:first-child {
+  border-top: 1px solid var(--gray-color02);
+}
+
+.works-single_content-data {
+  padding: 8px 0 16px;
+  border-bottom: 1px solid var(--gray-color02);
+}
+
+.about_content-wapper {
+  width: 100%;
+}
+
+.works-single_slideshow {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin-top: 32px;
+}
+
 /* ---------- js ---------- */
 .l_header.js_header_fixed {
   position: fixed;

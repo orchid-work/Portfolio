@@ -31,3 +31,12 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// /*---------- スライドショー ----------*/
+const slideshow = new Swiper(".js_slideshow", {
+  speed: 1200,
+  effect: "fade",
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
