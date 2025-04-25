@@ -40,3 +40,56 @@ const slideshow = new Swiper(".js_slideshow", {
     disableOnInteraction: false,
   },
 });
+
+// /*---------- スクロールアニメーション ----------*/
+document.querySelectorAll(".js_section").forEach((section) => {
+  const title = section.querySelector(".js_section_title");
+  const copy = section.querySelector(".js_section_copy");
+  const subCopy = section.querySelector(".js_section_desc");
+  const item = section.querySelector(".js_section_item");
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: "top 60%",
+      toggleActions: "play none none none",
+    },
+  });
+
+  tl.from(title, {
+    opacity: 0,
+    x: -30,
+    duration: 1.2,
+    ease: "power2.out",
+  })
+    .from(
+      copy,
+      {
+        opacity: 0,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out",
+      },
+      "-=0.8"
+    )
+    .from(
+      subCopy,
+      {
+        opacity: 0,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out",
+      },
+      "-=0.8"
+    )
+    .from(
+      item,
+      {
+        opacity: 0,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out",
+      },
+      "-=0.8"
+    );
+}); 
