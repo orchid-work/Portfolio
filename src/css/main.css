@@ -560,6 +560,11 @@ span {
   flex-shrink: 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: var(--white-color);
+  transition: 0.3s;
+}
+
+.top_works_content-wrapper:hover {
+  transform: scale(1.03);
 }
 
 .top_works_img-wrapper,
@@ -1066,6 +1071,22 @@ span {
 
 .works-single_text {
   margin-top: 8px;
+}
+
+/* ---------- Contact ---------- */
+.contact_main {
+  margin-top: 120px;
+}
+
+.contact_desc {
+  width: 100%;
+  margin-top: 110px;
+}
+
+
+
+.contact_cta {
+  background: var(--gray-color);
 }
 
 /* ---------- js ---------- */

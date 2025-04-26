@@ -20,7 +20,6 @@ navLinks.forEach(navLink => {
 
 // /*---------- header-fixed ----------*/
 // スクロール0でヘッダー表示なし、100pxスクロールしたら追従
-
 const header = document.querySelector(".l_header");
 
 window.addEventListener("scroll", () => {
@@ -45,7 +44,7 @@ const slideshow = new Swiper(".js_slideshow", {
 document.querySelectorAll(".js_section").forEach((section) => {
   const title = section.querySelector(".js_section_title");
   const copy = section.querySelector(".js_section_copy");
-  const subCopy = section.querySelector(".js_section_desc");
+  const desc = section.querySelector(".js_section_desc");
   const item = section.querySelector(".js_section_item");
 
   const tl = gsap.timeline({
@@ -73,7 +72,7 @@ document.querySelectorAll(".js_section").forEach((section) => {
       "-=0.8"
     )
     .from(
-      subCopy,
+      desc,
       {
         opacity: 0,
         y: 30,
