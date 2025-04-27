@@ -182,6 +182,24 @@ span {
   font-size: 24px;
 }
 
+@media screen and (min-width: 1080px) {
+  .l_header-nav_link,
+  .l_header-nav_link__sub {
+    padding-bottom: 3px; /* テキストと下線の間隔 */
+    background-image: var(--main-gradation);
+    background-repeat: no-repeat;
+    background-position: bottom right; /* 下線の初期位置 */
+    background-size: 0 3px; /* 下線のサイズ（横幅、高さ） */
+    transition: background-size 0.3s;
+  }
+  
+  .l_header-nav_link:hover,
+  .l_header-nav_link__sub:hover {
+    background-position: bottom left; /* 下線のホバー時位置 */
+    background-size: 100% 3px; /* 下線の横幅を100%にする */
+  }
+}
+
 .l_header-nav_item:not(:first-child) {
   margin-top: 40px;
 }
@@ -276,6 +294,10 @@ span {
   content: "連絡先";
 }
 
+.m_section-title_privacy::before {
+  content: "個人情報保護方針";
+}
+
 .m_section-title::after {
   content: "";
   width: 60px;
@@ -285,6 +307,10 @@ span {
   bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.m_section-title_cta {
+  margin-bottom: 100px;
 }
 
 .m_hamburger {
@@ -333,7 +359,8 @@ span {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.m_btn, .m_sm-btn {
+.m_btn, 
+.m_sm-btn {
   width: 100%;
   height: 100%;
   display: flex;
@@ -346,12 +373,26 @@ span {
   font-weight: bold;
 }
 
-.m_btn:hover {
+.m_btn__more,
+.m_btn__cta {
+  background: var(--main-gradation);
+  transition: all .3s;
+}
+
+.m_btn__more:hover,
+.m_btn__cta:hover {
   opacity: 0.8;
 }
 
-.m_btn__more {
-  background: var(--main-gradation);
+.m_btn__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  color: var(--black-color);
+  overflow: hidden;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .m_btn__right-arrow,
@@ -405,7 +446,7 @@ span {
 }
 
 .m_cta_desc {
-  margin-top: 110px;
+  margin-top: 56px;
   text-align: center;
 }
 
@@ -472,13 +513,13 @@ span {
 
 @media screen and (min-width: 768px) {
   .top_kv-copy {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .top_kv-copy {
-    font-size: 48px;
+    font-size: 32px;
     max-height: 525px;
   }
 }
@@ -540,6 +581,11 @@ span {
   flex-shrink: 0;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
   background: var(--white-color);
+  transition: 0.3s;
+}
+
+.top_works_content-wrapper:hover {
+  transform: scale(1.03);
 }
 
 .top_works_img-wrapper,
@@ -1048,9 +1094,103 @@ span {
   margin-top: 8px;
 }
 
+/* ---------- Contact ---------- */
+.contact_main {
+  margin-top: 120px;
+}
+
+.contact_desc {
+  width: 100%;
+  margin-top: 110px;
+}
+
+.contact_form {
+  margin-top: 56px;
+}
+
+.contact_form_body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact_form_unit {
+  padding: 16px;
+}
+
+.contact_form_unit-head {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact_form_unit-required {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 16px;
+  margin-left: 8px;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 50vh;
+}
+
+.contact_form-input,
+.contact_form-textarea {
+  width: 100%;
+  height: 32px;
+  background: var(--gray-color);
+  border-bottom: 1px solid var(--gray-color03);
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.contact_form-textarea {
+  height: 200px;
+  border: none;
+}
+
+.contact_form_submit {
+  cursor: pointer;
+}
+
+.contact_cta {
+  background: var(--gray-color);
+}
+
+.contact_cta_desc {
+  text-align: center;
+}
+
+.contact_form_privacy {
+  margin-top: 24px;
+}
+
+.contact_form_privacy-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Privacy-policy ---------- */
+.privacy_main {
+  margin-top: 120px;
+  padding-top: 80px;
+}
+
+
+/* ---------- 404error ---------- */
+.error_main {
+  margin-top: 120px;
+}
+
+.error_copy {
+  font-size: 24px;
+}
+
+.error_desc {
+  margin-top: 48px;
+}
+
 /* ---------- js ---------- */
 .l_header.js_header_fixed {
-  position: fixed;
   background: var(--gray-color);
   transition: 0.3s ease;
   top: 0;
