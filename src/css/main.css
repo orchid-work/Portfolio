@@ -105,6 +105,7 @@ span {
   left: 0;
   z-index: var(--z-index-modal);
   background: var(--gray-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -1191,9 +1192,11 @@ span {
 
 /* ---------- js ---------- */
 .l_header.js_header_fixed {
+  position: fixed;
   background: var(--gray-color);
   transition: 0.3s ease;
   top: 0;
+  height: 80px;
 }
 
 .js_navigation {
