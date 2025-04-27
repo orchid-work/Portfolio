@@ -1196,6 +1196,7 @@ span {
   background: var(--gray-color);
   transition: 0.3s ease;
   top: 0;
+  height: 80px;
 }
 
 .js_navigation {
