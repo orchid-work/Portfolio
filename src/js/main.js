@@ -46,6 +46,7 @@ document.querySelectorAll(".js_section").forEach((section) => {
   const copy = section.querySelector(".js_section_copy");
   const desc = section.querySelector(".js_section_desc");
   const item = section.querySelector(".js_section_item");
+  const item02 = section.querySelector(".js_section_item02");
 
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -83,6 +84,16 @@ document.querySelectorAll(".js_section").forEach((section) => {
     )
     .from(
       item,
+      {
+        opacity: 0,
+        y: 30,
+        duration: 1.2,
+        ease: "power2.out",
+      },
+      "-=0.8"
+    )
+    .from(
+      item02,
       {
         opacity: 0,
         y: 30,
